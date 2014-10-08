@@ -13,127 +13,162 @@
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-<div id="content">
-    <div class="container">
-        <h1>Coder Dojo Zurich</h1>
-
-        <p>A place for young coders to master their skills</p>
-    </div>
-</div>
+<!-- Static navbar -->
+<div class="navbar navbar-default" role="navigation">
 <div class="container">
-    <div class="row">
-        <div class="col-md-9" role="main">
-            <div>
-                <h1 id="join-us" class="page-header">Join us</h1>
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="/assets/img/logo.png" id="logo" style="max-height:30px"></a>
+    <a class="navbar-brand" href="#">Coder Dojo Zürich</a>
+  </div>
+  <!--
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Nav header</li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+    -->
+    <ul class="nav navbar-nav navbar-collapse collapse navbar-right">
+      <li class="active"><a href="#joinus">Join Us</a></li>
+      <li><a href="#ouroffer">Our offer</a></li>
+      <li class="dropdown">
+        <a href="#sponsors" class="dropdown-toggle" data-toggle="dropdown">Our sponsors <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#sponsor-liip">Liip</a></li>
+          <li><a href="#sponser-colab">Colab</a></li>
+        </ul>
+      </li>
+      <li><a href="#materials">Materials</a></li>
+      <li><a href="#materials">Mentors</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div><!--/.nav-collapse -->
+</div><!--/.container-fluid -->
+</div>
 
-                <p class="lead">We are open for all people aged 7-17 who would like to learn how to code.</p>
+<div class="container">
+<div id="carousel-dojo" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-dojo" data-slide-to="0" class="active"></li>
+    <!--
+    <li data-target="#carousel-dojo" data-slide-to="1"></li>
+    <li data-target="#carousel-dojo" data-slide-to="2"></li>
+    -->
+  </ol>
 
-            </div>
-            <div data-spy="affix">
-                <h1 id="offer" class="page-header">Our offer</h1>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="assets/img/banner_dojo.jpg" alt="...">
+      <div class="carousel-caption">
+      <p style="text-align:left;">Sunday, 15:00 &ndash; 17:00<br>Young coders come and learn to master your skills</p>
+      </div>
+    </div>
+  </div>
 
-                <p class="lead"></p>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-dojo" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-dojo" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+</div>
 
-                <h3 id="youngest">Youngest</h3>
+<div class="container">
+    <h1><a name="joinus"></a>Join Us</h1>
+    <p class="lead">We are open for all people aged 7-17 who would like to learn how to code.</p>
+</div>
 
-                <p class="lead"></p>
+<div class="container">
+    <h1><a name="ouroffer"></a>Our offer</h1>
+    <p class="lead"></p>
 
-                <div class="row">
-                    <div class="col-xs-6 col-md-4">
-                        <a class="thumbnail" href="offer/lightbot">
-                            <img src="thumbnails/offer/lightbot.jpg"/>
-                        </a>
-                        <h4>Light bot</h4>
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>For the youngest</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <h4>Lightbot</h4>
+      <p>Learn to code by making a small robot light all the tiles.</p>
+      <h4>Program your parents</h4>
+      <p>Your parent is your robot</p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>For all kids</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+   </div>
+    <div class="col-md-4">
+      <h2>For the most ambitious</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
+</div>
 
-                        <p>Learn to code by making a small robot light all the tiles.</p>
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <a class="thumbnail" href="offer/parent-robot-programming">
-                            <img src="thumbnails/offer/parent-robot-programming.jpg"/>
-                        </a>
-                        <h5>Parent robot programming</h5>
+<div class="container">
+    <h1><a name="sponsors"></a>Sponsors</h1>
+    <p class="lead">We are open for all people aged 7-17 who would like to learn how to code.</p>
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2><a name="sponsors-liip"></a>Liip</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2><a name="sponsors-colab"></a>Colab</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+   </div>
+    <div class="col-md-4">
+      <h2>Support us!</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
+</div>
 
-                        <p>Your parent is your robot</p>
-                    </div>
-                </div>
-                <h3 id="younger">Younger</h3>
+<div class="container">
+    <h1><a name="materials"></a>Materials</h1>
+    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+</div>
 
-                <p class="lead"></p>
-
-                <div class="row">
-                    <div class="col-xs-6 col-md-4">
-                        <a class="thumbnail" href="offer/bla">
-                            <img src="thumbnails/offer/bla.jpg"/>
-                        </a>
-                        <h4>Bla</h4>
-                        <p>Bla bla</p>
-                    </div>
-                </div>
-                <h3 id="young">Young</h3>
-
-                <p>fsadjklf ;kljasfdjkl jklfasjkl jkl asjkdfjk jkl asdfjk kjl askjfdljk ljk ljkasdfjk
-                    asdfjlk jkl jklsfjk jklsafjklsfjklf jkl asjkl jklsfd jkl jklasdf
-                    asdfjkl jkl asjklf jklasfdjks ajkl ljka sjkl ljksafdkjldsfjkl
-                    asfkdjl jkl sfjklfshjeiortioewiuwrqe j iowquri iouwrqeiuo nl</p>
-            </div>
-            <div>
-                <h1 id="sponsors" class="page-header">Sponsors</h1>
-
-                <p class="lead"></p>
-
-                <h3 id="liip">Liip</h3>
-
-                <h3 id="colab">Colab</h3>
-            </div>
-            <div>
-                <h1 id="materials" class="page-header">Materials</h1>
-
-                <p class="lead"></p>
-            </div>
-            <div>
-                <h1 id="mentors" class="page-header">Mentors</h1>
-
-                <p class="lead"></p>
-            </div>
-            <div>
-                <h1 id="contact" class="page-header">Contact</h1>
-
-                <p class="lead"></p>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="cd-nav hidden-print hidden-xs hidden-sm affix" role="complementary">
-                <ul class="nav">
-                    <li>
-                        <a href="#join-us">Join us</a>
-                    </li>
-                    <li>
-                        <a href="#offer">Our offer</a>
-                    </li>
-                    <li>
-                        <a href="#sponsors">Sponsors</a>
-                        <ul class="nav">
-                            <li><a href="#liip">Liip</a></li>
-                            <li><a href="#colab">Colab</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#materials">Materials</a>
-                    </li>
-                    <li>
-                        <a href="#mentors">Mentors</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<div class="container">
+    <h1><a name="mentors"></a>Mentors</h1>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     </div>
 </div>
-<!--</div>-->
-<!--</div>-->
+
+<div class="container">
+    <h1><a name="contact"></a>Contact</h1>
+    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+</script>
 </body>
 </html>
