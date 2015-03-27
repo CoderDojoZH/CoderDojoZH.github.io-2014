@@ -15,6 +15,14 @@ the parent div is not scaled and a gray area is shown on the right side
 #carousel-dojo img {
     max-height:50vh;
 }
+.carousel-inner {
+    max-height:70vh;
+}
+
+.container-carousel {
+    max-height:50vh;
+}
+
 */
 
 .carousel-caption p {
