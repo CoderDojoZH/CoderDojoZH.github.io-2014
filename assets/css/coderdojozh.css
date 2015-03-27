@@ -1,0 +1,22 @@
+h1 {
+    /* color:#a7c2e6; */
+    color:#5a9cce;
+}
+div.contact h1 {
+    color:#b1dc05;
+}
+h2 a {
+    color:black;
+}
+
+/*
+trying to limit the height of the image to 50% of the viewport's height;
+the parent div is not scaled and a gray area is shown on the right side
+#carousel-dojo img {
+    max-height:50vh;
+}
+*/
+
+.carousel-caption p {
+    font-size:1.7em;
+}

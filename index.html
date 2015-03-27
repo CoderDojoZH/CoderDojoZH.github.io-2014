@@ -8,6 +8,7 @@
     </title>
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/coderdojozh.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="#"><img src="assets/img/logo.png" id="logo" style="max-height:30px"></a>
-    <a class="navbar-brand" href="#">Coder Dojo Zürich</a>
+    <a class="navbar-brand" href="#">Coder Dojo Zurich</a>
   </div>
   <!--
   <div class="navbar-collapse collapse">
@@ -46,8 +47,9 @@
       </li>
     </ul>
     -->
+    <!--
     <ul class="nav navbar-nav navbar-collapse collapse navbar-right">
-      <li class="active"><a href="#joinus">Join Us</a></li>
+      <li class="active"><a href="#join-us">Join Us</a></li>
       <li><a href="#ouroffer">Our offer</a></li>
       <li class="dropdown">
         <a href="#sponsors" class="dropdown-toggle" data-toggle="dropdown">Our sponsors <span class="caret"></span></a>
@@ -60,6 +62,7 @@
       <li><a href="#materials">Mentors</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+  -->
   </div><!--/.nav-collapse -->
 </div><!--/.container-fluid -->
 </div>
@@ -96,8 +99,16 @@
 </div>
 
 <div class="container">
-    <h1><a name="joinus"></a>Join Us</h1>
-    <p class="lead">We are open for all people aged 7-17 who would like to learn how to code.</p>
+    <h1><a name="join-us"></a>Join Us</h1>
+    <p class="lead">The CoderDojo Zurch is a free computer programming club for young people aged 7-17.</p>
+    <p>The Dojo is run by a group of volunteers and  is multilingual (DE, EN, IT, PL, FR, ...).</p>
+    <p>We put an emphasis on self-motivated learning through project work, peer-to-peer mentoring and the creation of innovative projects.</p>
+    <p>We meet on most Sundays from 15:00 to 17:00 at Liip's Arena, Limmatstrasse 183 in Zurich.</p>
+    <p>If you want to join us, you can register to the group and the event on our <a href="http://meetup.com/Coder-Dojo-Zurich">meetup group</a>. Or simply drop by!</p>
+    <p><a class="btn btn-default" href="#join-us-map" onclick="return toggler('join-us-map');" role="button">View map &raquo;</a></p>
+    <div id="join-us-map">
+        <p><img src="assets/img/joinus-map-liip.png" style="max-width:400px;"></p>
+    </div>
 </div>
 
 <div class="container">
@@ -107,69 +118,97 @@
   <!-- Example row of columns -->
   <div class="row">
     <div class="col-md-4">
-      <h2>For the youngest</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <h4>Lightbot</h4>
-      <p>Learn to code by making a small robot light all the tiles.</p>
+      <h2>The first steps</h2>
+      <p>Ninjas who have never been coding before, are introduced to Lightbot and learn the basics about programming.</p>
+      <p>As soon as they are comfortable with it, they're introduced to Scratch, a powerfull jigsaw-like programming environment.</p>
+      <p><a class="btn btn-default" href="#first-steps-more" onclick="return toggler('first-steps-more');" role="button">View details &raquo;</a></p>
+     <div id="first-steps-more">
+     <h4>Lightbot</h4>
+<p>Lightbot is an educational game that introduces several principles of programming like sequence, conditions and loops. Kids use their problem solving skills to complete the puzzles!</p>
+      <p>The kids have to plan (or code) the robots movements and get it to walk around, jump and light the blue tiles.</p>
       <h4>Program your parents</h4>
-      <p>Your parent is your robot</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p>When we have several new kids at once, we propose them a "Program your parents" activity: instead of programming a Lightbot robot, they write down the instructions on a sheet of paper and get their parents to move to a given point and pick an object.</p>
+      </div>
     </div>
     <div class="col-md-4">
       <h2>For all kids</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p>Currently, <a href="http://scratch.mit.edu">Scratch</a> is what most of our kids are using for programming games. We also run workshops with <a href="http://makeymakey.com">MaKey MaKey</a> and <a href="https://aseba.wikidot.com/">Thymio</a>.</p>
+      <p><a class="btn btn-default" href="#for-all-kids-more" onclick="return toggler('for-all-kids-more');" role="button">View details &raquo;</a></p>
+     <div id="for-all-kids-more">
+     <h4>Scratch</h4>
+        <p><a href="http://scratch.mit.edu">Scratch</a> is a free programming language  designed to be fun, educational, and easy to learn. It has the tools for creating interactive stories, games, art, simulations, and more. Scratch has its own paint editor, a sound editor and a ton of pre-made assets that make it easy to pick up by example.</p>
+
+        <p>Scratch makes coding accessible by providing blocks like a jigsaw puzzle that you drag and combine into structures.</p>
+
+        <p>It's a powerful and simple tool that allows you to just try things out and see what happens.</p>
+     <h4>MaKey MaKey</h4>
+        <p>MaKey MaKey works like a keyboard but does not look like one: it's a colorful octopus with lot of cables and alligator clips, connecting objects from your everyday life to your games. Or your Scratch programs. It works with bananas, play-doh and all conductive materials!</p>
+     <h4>Thymio</h4>
+        <p>Thymio II is an affordable educational robot providing a large number of sensors and actuators. It allows interactions based on light and touch, with graphical and text programming.</p>
+     </div>
    </div>
     <div class="col-md-4">
       <h2>For the most ambitious</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p>We are currently starting our first try with python and pygame: drop by and ask for more!</p>
+      <!--
       <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      -->
     </div>
   </div>
 </div>
 
 <div class="container">
-    <h1><a name="sponsors"></a>Sponsors</h1>
-    <p class="lead">We are open for all people aged 7-17 who would like to learn how to code.</p>
+    <h1><a name="sponsors"></a>Our Sponsors</h1>
+    <p class="lead">The CoderDojo is 100% based on our volunteers. But we could not do much without our generous sponsors providing us a location and internet access.</p>
   <!-- Example row of columns -->
   <div class="row">
     <div class="col-md-4">
-      <h2><a name="sponsors-liip"></a>Liip</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <h2><a name="sponsors-liip"></a><a href="http://liip.ch"><img src="assets/img/sponsors-liip.png" style="height:25px;" alt="Liip"></a></h2>
+      <p><a  href="http://liip.ch">Liip</a> is an agile development company based in Fribourg, Zurich, Lausanne, Bern and St. Gallen. </p>
     </div>
     <div class="col-md-4">
-      <h2><a name="sponsors-colab"></a>Colab</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <h2><a name="sponsors-colab"></a><a href="http://colab-zuerich.ch"><img src="assets/img/sponsors-colab.png" style="height:25px;"> Colab</a></h2>
+      <p><a href="http://colab-zuerich.ch">Colab</a> is a colaborative working space for Entrepreneurs, Startups &amp; Onliners. They also regularly organize and host events and build communities.</p>
    </div>
     <div class="col-md-4">
       <h2>Support us!</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <p>The best way to support us are, to become a mentor, coming to the Dojo with your kids or by becoming yourself a ninja, and of course, spreading the word to possible mentors and ninjas.</p>
     </div>
   </div>
 </div>
 
 <div class="container">
     <h1><a name="materials"></a>Materials</h1>
-    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <p>If possible, kids should come with a laptop, but we can provide laptops on demand.</p>
+    <p>If you have hardware laying around that can be used by kids for hacking, don't hesitate to ask us, if we can have a use for it!</p>
 </div>
 
 <div class="container">
     <h1><a name="mentors"></a>Mentors</h1>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p>If you want to help out and become a mentor, you can join the Swiss CoderDojo forum: https://groups.google.com/forum/m/#!forum/coderdojoch</p>
+        <p>New mentors are always welcome!</p>
+        <p>If you want to help out and become a mentor, you can join the Swiss CoderDojo forum: <a href="https://groups.google.com/forum/m/#!forum/coderdojoch">https://groups.google.com/forum/m/#!forum/coderdojoch</a>.</p>
+        <p>What does it need?<br>
+        You should have fun spending time with kids, you should be ready to learn Scratch (or bring other fitting programming skill) and being ready to spend at least one Sunday afternoon a month at the CoderDojo.</p>
     </div>
 </div>
 
-<div class="container">
+<div class="container contact">
     <h1><a name="contact"></a>Contact</h1>
-    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <p>The best ways to reach us are @CoderDojoZh on Twitter and <a href="http://meetup.com/Coder-Dojo-Zurich">our meetup page</a>.</p>
+    <p>Or simply drop by on a Sunday afternoon!</p>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>/* if jquery not loaded from cdn */window.jQuery || document.write('<script src="assets/js/jquery.min.js">\x3C/script>')</script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script>
+function toggler(divId) {
+    $("#" + divId).toggle();
+    return false;
+}
+$("#join-us-map").hide();
+$("#first-steps-more").hide();
+$("#for-all-kids-more").hide();
 </script>
 </body>
 </html>
