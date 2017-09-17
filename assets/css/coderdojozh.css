@@ -3,7 +3,13 @@ h1 {
     color:#5a9cce;
 }
 div.contact h1 {
-    color:#b1dc05;
+    color:#00dc05;
+}
+h2.faq-group {
+    color: #00a104
+}
+h3.faq-question {
+    color: #004b04
 }
 h2 a {
     color:black;
