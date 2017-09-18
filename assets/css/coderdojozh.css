@@ -5,10 +5,10 @@ h1 {
 div.contact h1 {
     color:#00dc05;
 }
-h2.faq-group {
+div.container h2 {
     color: #00a104
 }
-h3.faq-question {
+div.container h3 {
     color: #004b04
 }
 h2 a {
