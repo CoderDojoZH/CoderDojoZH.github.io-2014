@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration management</title>
+    <script src="js/vue.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/moment.js"></script>
+    <link href="css/registration.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app-7" style="max-width:64em;">
+      <p v-if="event.banner"><img :src=event.banner style="max-width:100%; height:auto; width:auto;"></p>
+      <h1>{{ event.title }}</h1>
+      <h2>{{ event.date }}</h2>
+      <person-list
+          title="Participants"
+          v-bind:list="participant"
+          v-bind:event="event"
+      >
+      </person-list>
+      <person-list
+          title="Waitlist"
+          v-bind:list="waitlist"
+          v-bind:event="event"
+      >
+      </person-list>
+    </div>
+
+    <script>
+    // https://stackoverflow.com/a/9870540/5239250
+    function getQueryArgument(key) {  
+      return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+    } 
+
+    Vue.component('person-list', {
+      props: ['title', 'list', 'event'],
+      template: `
+      <div v-if="list.length > 0">
+        <h2>{{ title }}</h2>
+        <table>
+          <tr>
+            <th colspan=2></th>
+            <th v-for="item in event.topic" class="topic">
+              {{ item }}
+            </th>
+            <th></th>
+          </tr>
+          <tr is="person-item"
+            v-for="item in list"
+            v-bind:person="item"
+            v-bind:topic="event.topic"
+            v-bind:key="item.id"
+            class="participant"
+          >
+          </tr>
+          <tr class="total">
+            <td colspan=2></td>
+            <td
+              v-for="item in totalParticipants"
+              class="topic"
+            >
+              {{ item }}
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      `,
+      computed: {
+        totalParticipants: function() {
+          // https://stackoverflow.com/a/32141173/5239250
+          /*
+          if (this.list.length > 0) {
+            var sum = (r, a) => r.map((b, i) => a[0].participants[0] + b);
+            console.log('participant', this.participant);
+            return this.participant.reduce(sum);
+            return [0,0,0,0,0];
+          } else {
+            return [0,0,0,0,0];
+          }
+          */
+          var result = [0,0,0,0,0];
+          for (i = 0; i < this.list.length; i++) {
+            var participants = this.list[i].participants;
+            for (j = 0; j < participants.length; j++) {
+              result[j] += participants[j];
+            }
+          }
+          return result;
+        },
+      },
+    })
+
+    Vue.component('person-item', {
+      props: ['person', 'topic'],
+      template: `
+        <tr>
+          <td><img :src=person.thumbnail class="thumbnail"></td>
+          <td v-bind:class="{ notRegistered: hasNotRegistered(person) }">{{ person.name }}</td>
+          <td v-for="(item, index) in person.participants" class="participants">
+            <span v-if="editMode">
+              {{ topic[index] }} <br>
+              <input v-on:keyup.enter="save(person)" v-on:keyup.esc="close(person)" type="number" step="1" min="0" max="10" v-model.number="person.participants[index]">
+            </span>
+            <span v-else :title=topic[index]>{{ item }}</span>
+          </td>
+          <td  v-if="editMode">
+            <button v-on:click="save(person)"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+            <button v-on:click="close(person)"><i class="fa fa-window-close-o" aria-hidden="true"></i></button>
+          </td>
+          <td v-else>
+            <button v-on:click="edit(person)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+          </td>
+        </tr>`,
+      data: function() {
+        return {
+          editMode: false,
+          oldValue: 0
+        }
+      },
+      methods: {
+        edit: function(person) {
+          this.editMode = true;
+          this.oldValue = person.participants.slice();
+        },
+        save: function(person) {
+          this.editMode = false;
+          axios.post(this.$root.$options.apiUrl+'/api/event/' + getQueryArgument('id') + '/participant/' + person.id, {
+            count: person.participants
+          });
+        },
+        close: function(person) {
+          this.editMode = false;
+          person.participants = this.oldValue.slice();
+        },
+        hasNotRegistered: function (person) {
+          return person.participants.reduce(function(s, v) {return s + v;}, 0) == 0;
+          
+        }
+      }
+    })
+    var app7 = new Vue({
+      apiUrl : 'http://graphicslab.org/dojo-registration',
+      el: '#app-7',
+      data: {
+        eventId: getQueryArgument('id'),
+        event: [],
+        participant: [],
+        waitlist: [],
+      },
+      computed: {
+        totalParticipants: function() {
+          // https://stackoverflow.com/a/32141173/5239250
+          /*
+          if (this.participant.length > 0) {
+            var sum = (r, a) => r.map((b, i) => a[0].participants[0] + b);
+            console.log('participant', this.participant);
+            return this.participant.reduce(sum);
+            return [0,0,0,0,0];
+          } else {
+            return [0,0,0,0,0];
+          }
+          */
+          var result = [0,0,0,0,0];
+          for (i = 0; i < this.participant.length; i++) {
+            var participants = this.participant[i].participants;
+            for (j = 0; j < participants.length; j++) {
+              result[j] += participants[j];
+            }
+          }
+          return result;
+        },
+      },
+      created: function () {
+        // console.log('this', this);
+        axios.get(this.$options.apiUrl+'/api/event/' + this.eventId)
+          .then(function (response) {
+            // console.log('event response', response);
+            this.event = response.data;
+            this.event.date = moment(this.event.date).format('dddd Do MMMM YYYY, HH:mm');
+          }.bind(this))
+          .catch(function (error) {
+            console.log(error);
+          });
+        axios.get(this.$options.apiUrl+'/api/event/' + this.eventId + '/rvsps')
+          .then(function (response) {
+            // console.log('rvsps response', response);
+            this.participant = response.data['yes'];
+            this.waitlist = response.data['waitlist'];
+          }.bind(this))
+          .catch(function (error) {
+            console.log(error);
+          });
+      },
+    })
+    </script>
+  </body>
+</html>
