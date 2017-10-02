@@ -127,7 +127,7 @@
         },
         save: function(person) {
           this.editMode = false;
-          axios.post(this.$root.$options.apiUrl+'/api/event/' + getQueryArgument('id') + '/participant/' + person.id, {
+          axios.post(this.$root.$options.apiUrl+'/event/' + getQueryArgument('id') + '/participant/' + person.id, {
             count: person.participants
           });
         },
@@ -175,7 +175,7 @@
       },
       created: function () {
         // console.log('this', this);
-        axios.get(this.$options.apiUrl+'/api/event/' + this.eventId)
+        axios.get(this.$options.apiUrl+'/event/' + this.eventId)
           .then(function (response) {
             // console.log('event response', response);
             this.event = response.data;
@@ -184,7 +184,7 @@
           .catch(function (error) {
             console.log(error);
           });
-        axios.get(this.$options.apiUrl+'/api/event/' + this.eventId + '/rvsps')
+        axios.get(this.$options.apiUrl+'/event/' + this.eventId + '/rvsps')
           .then(function (response) {
             // console.log('rvsps response', response);
             this.participant = response.data['yes'];
