@@ -11,6 +11,12 @@
   </head>
   <body>
     <div id="app-7" style="max-width:64em;">
+	  <div v-if="warningNotSupported">
+		<h1>Unsupported Browser</h1>
+		<div>
+		  <p>Your browser is not supported, please use a modern version of your browser, Mozilla Firefox or Google Chrome.</p>
+		</div>
+	  </div>
       <p v-if="event.banner"><img :src=event.banner style="max-width:100%; height:auto; width:auto;"></p>
       <h1>{{ event.title }}</h1>
       <h2>{{ event.date }}</h2>
@@ -145,6 +151,7 @@
       apiUrl : 'http://graphicslab.org/dojo-registration',
       el: '#app-7',
       data: {
+        warningNotSupported: false,
         eventId: getQueryArgument('id'),
         event: [],
         participant: [],
