@@ -34,3 +34,31 @@ the parent div is not scaled and a gray area is shown on the right side
 .carousel-caption p {
     font-size:1.7em;
 }
+
+table {
+    border:none;
+    border-collapse: collapse;
+}
+
+table.times td,th {
+    margin: 5px;
+    padding: 5px;
+    /*border-left: 1px solid #000;*/
+    /*border-right: 1px solid #000;*/
+}
+
+table td:first-child,th:first-child {
+    border-left: none;
+}
+
+table td:last-child,th:last-child {
+    border-right: none;
+}
+
+td.time {
+    text-align: center;
+}
+
+hr {
+    border-top: 3px double #00a104;
+}
