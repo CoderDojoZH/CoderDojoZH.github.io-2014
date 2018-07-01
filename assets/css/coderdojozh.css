@@ -62,3 +62,10 @@ td.time {
 hr {
     border-top: 3px double #00a104;
 }
+
+h1.challenge-topic  {
+    text-align: center;
+    color: #4c6d94;
+    font-size: 400%;
+    text-shadow: 2px 4px 3px rgba(32, 49, 66, 0.3);
+}
