@@ -1,7 +1,13 @@
+body {
+    /* To display headers correctly below the top menu. Without it the top menu will hide the header of a section */
+    padding-top: 70px;
+}
+
 h1 {
     /* color:#a7c2e6; */
     color:#5a9cce;
 }
+
 div.contact h1 {
     color:#00dc05;
 }
