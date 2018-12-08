@@ -1,11 +1,18 @@
 body {
-    /* To display headers correctly below the top menu. Without it the top menu will hide the header of a section */
+    /* To display he`aders correctly below the top menu. Without it the top menu will hide the header of a section */
     padding-top: 70px;
+    font-family: calibre;
+    font-size: 18px;
 }
 
 h1 {
     /* color:#a7c2e6; */
     color:#5a9cce;
+}
+
+iframe.video {
+    display: block;
+    margin: 0 auto;
 }
 
 div.contact h1 {
@@ -78,4 +85,8 @@ h1.challenge-topic  {
     color: #4c6d94;
     font-size: 400%;
     text-shadow: 2px 4px 3px rgba(32, 49, 66, 0.3);
+}
+
+.challenge-title {
+    font-weight: bolder;
 }
